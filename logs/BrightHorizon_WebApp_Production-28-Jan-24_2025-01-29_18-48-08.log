@@ -1,0 +1,34 @@
+2025-01-29 18:48:10 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Ravi_Kumar2\AppData\Local\JetBrains\IdeaIC2021.3\temp-testng-customsuite.xml
+
+2025-01-29 18:48:11 [main] INFO  com.brighthorizon.test.automation.framework.config.ConfigReader - Loaded global configuration from config.properties.
+2025-01-29 18:48:11 [main] INFO  com.brighthorizon.test.automation.framework.config.ConfigReader - Loaded prod environment configuration.
+2025-01-29 18:48:11 [main] INFO  com.brighthorizon.test.automation.framework.config.ConfigReader - Browser Provided in Configuration: chrome
+2025-01-29 18:48:11 [main] INFO  hooks.CucumberHooks - Starting setup for scenario: Positive Scenario - Verify search functionality with valid input
+2025-01-29 18:48:11 [main] INFO  com.brighthorizon.test.automation.framework.config.ConfigReader - Browser Provided in Configuration: chrome
+2025-01-29 18:48:11 [main] INFO  com.brighthorizon.test.automation.framework.core.DriverManager - Execution Platform: local-driver
+2025-01-29 18:48:11 [main] INFO  com.brighthorizon.test.automation.framework.core.DriverManager - Initializing Chrome browser using local driver at path: src/main/resources/drivers/chromedriver/chromedriver.exe
+2025-01-29 18:48:13 [main] INFO  com.brighthorizon.test.automation.framework.core.DriverManager - chrome browser initialized successfully for thread: 1
+2025-01-29 18:48:13 [main] INFO  hooks.CucumberHooks - Initialized WebDriver for browser: chrome
+2025-01-29 18:48:28 [main] INFO  hooks.CucumberHooks - Closed WebDriver for scenario: Positive Scenario - Verify search functionality with valid input
+2025-01-29 18:48:28 [main] INFO  hooks.CucumberHooks - Starting setup for scenario: Negative Scenario - Verify search functionality with invalid input
+2025-01-29 18:48:28 [main] INFO  com.brighthorizon.test.automation.framework.config.ConfigReader - Browser Provided in Configuration: chrome
+2025-01-29 18:48:28 [main] INFO  com.brighthorizon.test.automation.framework.core.DriverManager - Execution Platform: local-driver
+2025-01-29 18:48:28 [main] INFO  com.brighthorizon.test.automation.framework.core.DriverManager - Initializing Chrome browser using local driver at path: src/main/resources/drivers/chromedriver/chromedriver.exe
+2025-01-29 18:48:29 [main] INFO  com.brighthorizon.test.automation.framework.core.DriverManager - chrome browser initialized successfully for thread: 1
+2025-01-29 18:48:29 [main] INFO  hooks.CucumberHooks - Initialized WebDriver for browser: chrome
+2025-01-29 18:48:43 [main] INFO  hooks.CucumberHooks - Closed WebDriver for scenario: Negative Scenario - Verify search functionality with invalid input
+2025-01-29 18:48:43 [main] INFO  hooks.CucumberHooks - Starting setup for scenario: Negative Scenario - Verify search functionality with empty input
+2025-01-29 18:48:43 [main] INFO  com.brighthorizon.test.automation.framework.config.ConfigReader - Browser Provided in Configuration: chrome
+2025-01-29 18:48:43 [main] INFO  com.brighthorizon.test.automation.framework.core.DriverManager - Execution Platform: local-driver
+2025-01-29 18:48:43 [main] INFO  com.brighthorizon.test.automation.framework.core.DriverManager - Initializing Chrome browser using local driver at path: src/main/resources/drivers/chromedriver/chromedriver.exe
+2025-01-29 18:48:44 [main] INFO  com.brighthorizon.test.automation.framework.core.DriverManager - chrome browser initialized successfully for thread: 1
+2025-01-29 18:48:44 [main] INFO  hooks.CucumberHooks - Initialized WebDriver for browser: chrome
+2025-01-29 18:48:57 [main] INFO  hooks.CucumberHooks - Closed WebDriver for scenario: Negative Scenario - Verify search functionality with empty input
+2025-01-29 18:48:57 [main] INFO  hooks.CucumberHooks - Starting setup for scenario: Negative Scenario - Verify search functionality with special characters
+2025-01-29 18:48:57 [main] INFO  com.brighthorizon.test.automation.framework.config.ConfigReader - Browser Provided in Configuration: chrome
+2025-01-29 18:48:57 [main] INFO  com.brighthorizon.test.automation.framework.core.DriverManager - Execution Platform: local-driver
+2025-01-29 18:48:57 [main] INFO  com.brighthorizon.test.automation.framework.core.DriverManager - Initializing Chrome browser using local driver at path: src/main/resources/drivers/chromedriver/chromedriver.exe
+2025-01-29 18:48:58 [main] INFO  com.brighthorizon.test.automation.framework.core.DriverManager - chrome browser initialized successfully for thread: 1
+2025-01-29 18:48:58 [main] INFO  hooks.CucumberHooks - Initialized WebDriver for browser: chrome
+2025-01-29 18:49:10 [main] INFO  hooks.CucumberHooks - Closed WebDriver for scenario: Negative Scenario - Verify search functionality with special characters

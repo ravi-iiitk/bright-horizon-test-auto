@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="BrowserStack Suite" parallel="tests" thread-count="1">
+
+    <!-- Desktop Tests -->
+
+
+    <test name="Chrome Mobile Test">
+        <parameter name="browser" value="samsung"/>
+        <parameter name="deviceName" value="Samsung Galaxy S23"/>
+        <parameter name="osVersion" value="13.0"/>
+        <classes>
+            <class name="BrowserStackRunner"/>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,6 @@
+"BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
+"0","","0","Verify search functionality","1","0","Negative Scenario - Verify search functionality with empty input","0"
+"0","","0","Verify search functionality","1","0","Negative Scenario - Verify search functionality with invalid input","0"
+"0","","0","Verify search functionality","1","0","Positive Scenario - Verify search functionality with valid input","0"
+"0","","0","","4","0","","0"
+"0","","0","Verify search functionality","1","0","Negative Scenario - Verify search functionality with special characters","0"
