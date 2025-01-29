@@ -9,7 +9,7 @@
         <parameter name="deviceName" value="Samsung Galaxy S23"/>
         <parameter name="osVersion" value="13.0"/>
         <classes>
-            <class name="BrowserStackRunner"/>
+            <class name="com.brighthorizon.test.automation.framework.runner.BrowserStackRunner"/>
         </classes>
     </test>
 

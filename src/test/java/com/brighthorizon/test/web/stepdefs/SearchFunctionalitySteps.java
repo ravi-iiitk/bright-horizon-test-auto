@@ -24,7 +24,7 @@ public class SearchFunctionalitySteps {
     @Given("I navigate to the BH home page {string}")
     public void iNavigateToTheBHHomePage(String url) {
         navigateTo(driver ,url);
-        brightHorizonsHomePage.acceptCookes();
+        brightHorizonsHomePage.acceptCookies();
         maximizeWindow(driver);
     }
 

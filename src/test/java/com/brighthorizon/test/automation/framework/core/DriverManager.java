@@ -74,46 +74,66 @@ public class DriverManager {
     }
 
     private static WebDriver initializeLocalDriver(String browser) {
-        String driverPath;
         switch (browser.toLowerCase()) {
             case "chrome":
-                driverPath = ConfigReader.getGlobal("chrome-driver-path");
-                System.setProperty("webdriver.chrome.driver", driverPath);
-                logger.info("Initializing Chrome browser using local driver at path: {}", driverPath);
-                return new ChromeDriver();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--disable-geolocation");
+                chromeOptions.addArguments("--use-fake-ui-for-media-stream"); // Disables popup
+                System.setProperty("webdriver.chrome.driver", ConfigReader.getGlobal("chrome-driver-path"));
+                logger.info("Initializing Chrome browser with disabled geolocation.");
+                return new ChromeDriver(chromeOptions);
+
             case "firefox":
-                driverPath = ConfigReader.getGlobal("firefox-driver-path");
-                System.setProperty("webdriver.gecko.driver", driverPath);
-                logger.info("Initializing Firefox browser using local driver at path: {}", driverPath);
-                return new FirefoxDriver();
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+                firefoxOptions.addPreference("geo.enabled", false); // Disables geolocation
+                firefoxOptions.addPreference("permissions.default.geo", 2); // Deny location automatically
+                System.setProperty("webdriver.gecko.driver", ConfigReader.getGlobal("firefox-driver-path"));
+                logger.info("Initializing Firefox browser with disabled geolocation.");
+                return new FirefoxDriver(firefoxOptions);
+
             case "edge":
-                driverPath = ConfigReader.getGlobal("edge-driver-path");
-                System.setProperty("webdriver.edge.driver", driverPath);
-                logger.info("Initializing Edge browser using local driver at path: {}", driverPath);
-                return new EdgeDriver();
+                EdgeOptions edgeOptions = new EdgeOptions();
+                edgeOptions.addArguments("--disable-geolocation");
+                System.setProperty("webdriver.edge.driver", ConfigReader.getGlobal("edge-driver-path"));
+                logger.info("Initializing Edge browser with disabled geolocation.");
+                return new EdgeDriver(edgeOptions);
+
             default:
                 throw new IllegalArgumentException("Unsupported browser: " + browser);
         }
     }
 
+
     private static WebDriver initializeLocalDriverManager(String browser) {
         switch (browser.toLowerCase()) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
-                logger.info("Initializing Chrome browser using WebDriverManager.");
-                return new ChromeDriver();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--disable-geolocation");
+                chromeOptions.addArguments("--use-fake-ui-for-media-stream"); // Blocks location pop-ups
+                logger.info("Initializing Chrome browser using WebDriverManager with geolocation disabled.");
+                return new ChromeDriver(chromeOptions);
+
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
-                logger.info("Initializing Firefox browser using WebDriverManager.");
-                return new FirefoxDriver();
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+                firefoxOptions.addPreference("geo.enabled", false);
+                firefoxOptions.addPreference("permissions.default.geo", 2);
+                logger.info("Initializing Firefox browser using WebDriverManager with geolocation disabled.");
+                return new FirefoxDriver(firefoxOptions);
+
             case "edge":
                 WebDriverManager.edgedriver().setup();
-                logger.info("Initializing Edge browser using WebDriverManager.");
-                return new EdgeDriver();
+                EdgeOptions edgeOptions = new EdgeOptions();
+                edgeOptions.addArguments("--disable-geolocation");
+                logger.info("Initializing Edge browser using WebDriverManager with geolocation disabled.");
+                return new EdgeDriver(edgeOptions);
+
             default:
                 throw new IllegalArgumentException("Unsupported browser: " + browser);
         }
     }
+
 
     private static WebDriver initializeCloudDriver(String browser) {
         String cloudProvider = ConfigReader.getGlobal("cloud-provider").toLowerCase();
